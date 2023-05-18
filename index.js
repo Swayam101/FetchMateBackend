@@ -4,10 +4,10 @@ const bodyParser = require("body-parser");
 const cors=require('cors')
 require("dotenv").config();
 
-const userRouter = require("./routes/userRouter");
-const petRouter = require("./routes/petRouter");
-const { protectRoute } = require("./middlewares/authMiddleware");
-const { get404, errorHandler } = require("./middlewares/errorHandlers");
+const userRouter = require("./src/routes/userRouter");
+const petRouter = require("./src/routes/petRouter");
+const { protectRoute } = require("./src/middlewares/authMiddleware");
+const { get404, errorHandler } = require("./src/middlewares/errorHandlers");
 
 const PORT = process.env.PORT || 3500;
 const app = express();
